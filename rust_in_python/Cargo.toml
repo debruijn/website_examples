@@ -1,0 +1,15 @@
+[package]
+name = "rust_in_python"
+version = "0.1.0"
+edition = "2021"
+
+[profile.dev]
+opt-level = 0
+
+[lib]
+name = "rust_in_python"
+crate-type = ["cdylib", "lib"]
+
+[dependencies.pyo3]
+version = "0.21.1"
+features = ["abi3-py310"]
