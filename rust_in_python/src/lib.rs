@@ -2,18 +2,11 @@ use pyo3::prelude::*;
 
 #[pyfunction]
 pub fn fibo(n: usize) -> usize {
-    match n {
-        1 => 1,
-        2 => 1,
-        _ => fibo(n - 2) + fibo(n - 1)
+    if n == 1 || n == 2 {
+        1
+    } else {
+        fibo(n - 2) + fibo(n - 1)
     }
-}
-
-//
-// #[pyfunction]
-// pub fn fibors(n: usize) -> usize {
-//     fibo(n)
-// }
 
 
 #[pymodule]
