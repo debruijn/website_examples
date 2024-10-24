@@ -7,9 +7,11 @@ pub fn fibo(n: usize) -> usize {
     } else {
         fibo(n - 2) + fibo(n - 1)
     }
+}
 
 
 #[pymodule]
+#[pyo3(name = "fibo_rust")]
 pub fn fiborust(m: &Bound<'_, PyModule>) -> PyResult<()> {
     m.add_function(wrap_pyfunction!(fibo, m)?)?;
     Ok(())

@@ -1,5 +1,5 @@
 [package]
-name = "rust_in_python"
+name = "fibo_rust"
 version = "0.1.0"
 edition = "2021"
 
@@ -7,9 +7,9 @@ edition = "2021"
 opt-level = 0
 
 [lib]
-name = "rust_in_python"
+name = "fibo_rust"
 crate-type = ["cdylib", "lib"]
 
 [dependencies.pyo3]
-version = "0.21.1"
+version = "0.22.5"
 features = ["abi3-py310"]

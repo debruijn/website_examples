@@ -1,4 +1,4 @@
-use rust_in_python::fibo;
+use fibo_rust::fibo;
 use std::time::Instant;
 
 
